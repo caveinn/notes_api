@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   def update
     if  @current_user != @user
-      render json: {"message": "cannot update different user"}, status: :unauthorized        
+      render json: {"message": "You can only update your data"}, status: :unauthorized        
     elsif @user.update(user_params) 
       render json: @user
     else
