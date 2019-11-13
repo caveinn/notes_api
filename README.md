@@ -1,24 +1,28 @@
-# README
+# Notes Api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is an api that allows users to store notes and share them among themselves. It has a structure for school and class to enable more structured sharing.
 
 * Ruby version
+ruby '2.5.0'
 
-* System dependencies
+Follow the following steps to get the db running
 
-* Configuration
+* Prerequisites
+  * Have porstgresql installed
 
-* Database creation
+* Configuration  
+Install the gems by running `bundle`
+Create an env file following the .env_example
 
-* Database initialization
+* Database creation  
+Create a database using `rails db:setup` 
 
-* How to run the test suite
+* Make db migrations  
+Make DB migrations by running `rails db:migrate`
 
-* Services (job queues, cache servers, search engines, etc.)
+* Start server  
+By running `rails s`
 
-* Deployment instructions
 
-* ...
+
+
