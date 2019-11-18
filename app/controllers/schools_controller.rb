@@ -15,7 +15,8 @@ class SchoolsController < ApplicationController
 
   # POST /schools
   def create
-    @school = School.new(school_params)
+
+    @school = @currenta_user.schools.new(school_params)
 
     if @school.save
       render json: @school, status: :created, location: @school
@@ -46,6 +47,6 @@ class SchoolsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def school_params
-      params.require(:school).permit(:name, :user)
+      params.require(:school).permit(:name, :user_id)
     end
 end
