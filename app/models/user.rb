@@ -8,4 +8,5 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 8 }, confirmation: true
   validates :email, uniqueness: { message: "email not unique"}, format: { with: VALID_EMAIL_REGEX, message: "invalid email"}
   has_many :schools, dependent: :destroy
+  has_many :notes
 end
