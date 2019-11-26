@@ -1,5 +1,7 @@
 class School < ApplicationRecord
-  validates :name, presence: true
+  has_many :streams, dependent: :destroy
+
+  validates :name, presence: true, uniqueness: true
   validates :user, presence: true
   belongs_to :user
 end

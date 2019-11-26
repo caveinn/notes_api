@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   post 'auth/login', to: 'authentication#authenticate'
   # signup
   post 'auth/signup', to: 'users#create'
+
+  resources :schools do
+    resources :streams
+  end
 end

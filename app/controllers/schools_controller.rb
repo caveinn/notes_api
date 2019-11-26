@@ -7,7 +7,7 @@ class SchoolsController < ApplicationController
   def index
     @schools = School.all
 
-    render json: @schools
+    render json: @schools, include: [:streams]
   end
 
   # GET /schools/1
