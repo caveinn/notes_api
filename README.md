@@ -1,5 +1,8 @@
 # Notes Api
 
+[![CircleCI](https://circleci.com/gh/caveinn/notes_api/tree/develop.svg?style=svg)](https://circleci.com/gh/caveinn/notes_api/tree/develop)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e4f6789e8bf48ff36204/maintainability)](https://codeclimate.com/github/caveinn/notes_api/maintainability)
+
 Notes API allows users to store notes and share them among themselves. It has a structure for a school and class to enable more structured sharing.
 
 ## Requirements
@@ -88,5 +91,6 @@ To get up and running with the project locally, follow the following steps.
 
 
 ## Contributors
+Mariam Natukunda  
 Kevin Nzioka
-Mariam Natukunda
+
