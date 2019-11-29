@@ -89,6 +89,11 @@ To get up and running with the project locally, follow the following steps.
 
     Now visit [localhost:3000](http://localhost:3000)
 
+**Hosted version**
+Hosted at `https://ruby-notes-api.herokuapp.com`
+
+Visit the link with a suffix of the enpoint you want 
+
 
 ## Contributors
 Mariam Natukunda  
