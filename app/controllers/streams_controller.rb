@@ -5,7 +5,7 @@ class StreamsController < ApplicationController
 
   # GET /schools/:school_id/streams
   def index
-    json_response(@school.streams)
+    render json: @school.streams, include: [:notes]
   end
 
   # GET /schools/:school_id/streams/:id

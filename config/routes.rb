@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   resources :schools do
     resources :streams
   end
+
+  resources :schools do
+    resources :streams do
+      resources :notes
+    end
+  end
 end

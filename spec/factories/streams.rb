@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :stream do
     name { Faker::Lorem.word }
-    school_id nil
+    school { create(:school) }
   end
 end

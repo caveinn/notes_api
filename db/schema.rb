@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_21_084939) do
+ActiveRecord::Schema.define(version: 2019_11_26_062403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "notes", force: :cascade do |t|
+    t.string "subject"
+    t.string "topic"
+    t.string "notes"
+    t.bigint "stream_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["stream_id"], name: "index_notes_on_stream_id"
+    t.index ["user_id"], name: "index_notes_on_user_id"
+  end
 
   create_table "schools", force: :cascade do |t|
     t.string "name"
@@ -39,6 +51,8 @@ ActiveRecord::Schema.define(version: 2019_11_21_084939) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "notes", "streams"
+  add_foreign_key "notes", "users"
   add_foreign_key "schools", "users"
   add_foreign_key "streams", "schools"
 end
